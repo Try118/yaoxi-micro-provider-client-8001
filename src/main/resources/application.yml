@@ -1,0 +1,27 @@
+server:
+  port: 8001
+
+mybatis:
+  mapper-locations:
+  - classpath*:/mappers/**/*.xml                       
+
+spring:
+   application:
+    name: yaoxi-micro-provider-client-8001
+   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver             
+    url: jdbc:mysql://47.100.177.88:3308/emm504db?serverTimezone=GMT%2B8              
+    username: root
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+    instance:
+      instance-id: yaoxi-micro-provider-client-8001
+      prefer-ip-address: true
+   
+    
+    
+    
